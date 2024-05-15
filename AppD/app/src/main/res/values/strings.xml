@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AppD</string>
+    <string-array name="episodes">
+        <item>Episode 1</item>
+        <item>Episode 2</item>
+        <!-- Add more episodes here -->
+    </string-array>
+</resources>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".Webtoon1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+
+        <!-- Header -->
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="62dp"
+            android:layout_height="60dp"
+            android:src="@drawable/logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Body -->
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="227dp"
+            android:text="Webtoon"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/webtoon_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/app_logo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/webtoon_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/avatar3"
+            app:layout_constraintBottom_toTopOf="@+id/webtoon_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/app_name" />
+
+        <TextView
+            android:id="@+id/webtoon_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Avatar The Last Airbender Book 3 "
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/webtoon_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/webtoon_image" />
+
+        <TextView
+            android:id="@+id/webtoon_description"
+            android:layout_width="369dp"
+            android:layout_height="67dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginBottom="20dp"
+            android:text="Aang awakens to find the group disguised as Fire Nation soldiers heading West on a Fire Nation ship, while Zuko has been restored to his position as crown prince and Iroh is imprisoned as a traitor. Sokka has planned a small-scale invasion of the Fire Nation to capture the Fire Lord’s palace and defeat Fire Lord Ozai, taking advantage of the solar eclipse. The invasion will be staged by a ragtag group of benders and warriors whom Aang has helped along his journey. Initially the invasion proceeds as planned, but Aang fails to find the Fire Lord before the eclipse ends. The invasion ultimately fails, and only Aang and the rest of the young ones are able to escape."
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/episode_spinner4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/webtoon_title" />
+
+        <!-- Comment section -->
+
+        <!-- WebView for displaying the selected episode -->
+
+        <Spinner
+            android:id="@+id/episode_spinner4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="112dp"
+            app:layout_constraintBottom_toTopOf="@+id/webview4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/webtoon_description" />
+
+        <EditText
+            android:id="@+id/comment_username"
+            android:layout_width="192dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="217dp"
+            android:hint="Username"
+            app:layout_constraintBottom_toTopOf="@+id/comment_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/webview4" />
+
+        <EditText
+            android:id="@+id/comment_text"
+            android:layout_width="346dp"
+            android:layout_height="103dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="19dp"
+            android:hint="Comment"
+            android:inputType="textMultiLine"
+            app:layout_constraintBottom_toTopOf="@+id/submit_comment_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/comment_username" />
+
+        <Button
+            android:id="@+id/submit_comment_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="360dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="32dp"
+            android:text="Submit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/comment_text" />
+
+        <ListView
+            android:id="@+id/comments_list4"
+            android:layout_width="404dp"
+            android:layout_height="174dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginBottom="45dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/submit_comment_button" />
+
+        <WebView
+            android:id="@+id/webview4"
+            android:layout_width="385dp"
+            android:layout_height="544dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="156dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="23dp"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            app:layout_constraintBottom_toTopOf="@+id/comment_username"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/webtoon_description" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
